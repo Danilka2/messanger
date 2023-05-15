@@ -1,0 +1,1646 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <!-- links/script -->
+    <link rel="stylesheet" href="./css/mormalize.min.css">
+    <link rel="stylesheet" href="./css/messager.min.css">
+    <script src="./js/mesanger.js" defer></script>
+
+    <!-- title -->
+    <title>Login</title>
+</head>
+<body>
+    <section class="page">
+
+        <aside class="aside standart-aside active">
+            <header class="header">
+                <div class="burger-menu" data-click="settings">
+                    <svg class="burger-menu__icon"><use xlink:href="#burger_menu"></use></svg>
+                </div>
+                <div class="search">
+                    <input type="text" class="search__input" placeholder="Поиск">
+                    <svg class="search__icon"><use xlink:href="#person_search"></use></svg>
+                </div>
+            </header>
+            <div class="message-list">
+                <!-- Этот блок можно искользовать как шаблон для отображения полученного списка пользователей -->
+                <!-- 
+
+                <div class="message-user tabs__btn">
+                    <div class="message-user__wrapper-img">
+                        <img src="./img/${avatarka}" alt="${avatarka}" class="message-user__img">
+                    </div>
+                    <div class="message-user__info">
+                        <p class="message-user__name">${name}</p>
+                        <p class="message-user__desc">${desc}</p>
+                    </div>
+                </div> 
+
+                -->
+
+                <div class="message-user tabs__btn">
+                    <div class="message-user__wrapper-img">
+                        <img src="./img/man3.jpg" alt="man3" class="message-user__img">
+                    </div>
+                    <div class="message-user__info">
+                        <p class="message-user__name">Михаил Романович</p>
+                        <p class="message-user__desc">Преподаватель</p>
+                    </div>
+                </div>
+                <div class="message-user tabs__btn">
+                    <div class="message-user__wrapper-img">
+                        <img src="./img/man1.jpg" alt="man1" class="message-user__img">
+                    </div>
+                    <div class="message-user__info">
+                        <p class="message-user__name">Федот Филотов </p>
+                        <p class="message-user__desc">Друг</p>
+                    </div>
+                </div>
+                <div class="message-user tabs__btn">
+                    <div class="message-user__wrapper-img">
+                        <img src="./img/man2.jpg" alt="man2" class="message-user__img">
+                    </div>
+                    <div class="message-user__info">
+                        <p class="message-user__name">Военкомат</p>
+                        <p class="message-user__desc">не отвечать</p>
+                    </div>
+                </div>
+        
+            </div>
+            <svg class="aside__exit"  data-click="aside"><use xlink:href="#back"></use></svg>
+        </aside>
+
+        <section class="settings standart-aside">
+            <div class="settings__top standart-aside__top">
+                <div class="settings-header standart-aside-header">
+                    <div class="settings-header__left standart-aside-header__left">
+                        <svg class="settings-header__icon standart-aside__icon" data-click="settings"><use xlink:href="#back"></use></svg>
+                        <p class="settings-header__title standart-aside__title">Настройки</p>
+                    </div>
+                    <svg class="settings-header__icon standart-aside__icon" data-click="edit"><use xlink:href="#edit"></use></svg>
+                </div>
+                <!-- Этот блок можно искользовать как шаблон для отображения информации о пользователе -->
+                <!-- 
+
+                <div class="settings-content standart-aside-content">
+                    <div class="settings-content__ava-wrapper">
+                        <img  class="settings-content__ava" src="./img/${avatarka}" alt="${avatarka}">
+                    </div>
+                    <div class="settings-info">
+                        <svg class="settings-info__icon standart-aside__icon"><use xlink:href="#person"></use></svg>
+                        <div class="settings-info__content">
+                            <p class="settings-info__username">${name} ${lastname}</p>
+                            <p class="settings-info__desc">${desc}</p>
+                        </div>
+                    </div>
+                    <div class="settings-bio">
+                        <svg class="settings-bio__icon standart-aside__icon"><use xlink:href="#info"></use></svg>
+                        <div class="settings-bio__content">
+                            <p class="settings-bio__text">${bio}</p>
+                        </div>
+                    </div>
+                </div>
+                
+                -->
+
+                <div class="settings-content standart-aside-content">
+                    <div class="settings-content__ava-wrapper">
+                        <img  class="settings-content__ava" src="./img/abstraction.png" alt="avasvsd">
+                    </div>
+                    <div class="settings-info">
+                        <svg class="settings-info__icon standart-aside__icon"><use xlink:href="#person"></use></svg>
+                        <div class="settings-info__content">
+                            <p class="settings-info__username">Данил Литвинов</p>
+                            <p class="settings-info__desc">Стажер</p>
+                        </div>
+                    </div>
+                    <div class="settings-bio">
+                        <svg class="settings-bio__icon standart-aside__icon"><use xlink:href="#info"></use></svg>
+                        <div class="settings-bio__content">
+                            <p class="settings-bio__text">Люблю игры, программирование. Стек
+                                Css + Html, JS, Python. Родтлся в Москве.
+                                Путешествовал много где, гуляю часто.
+                                Еще много текста воды для примера</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="settings-footer">
+                <div class="settings-footer__exit logout">
+                    <p class="settings-footer__exit-text">Выйти</p>
+                <svg class="settings-footer__icon"><use xlink:href="#logout"></use></svg>
+                </div>
+            </div>
+        </section>
+
+        <section class="edit standart-aside">
+            <div class="edit-header standart-aside-header">
+                <div class="edit-header__left standart-aside-header__left">
+                    <svg class="edit-header__icon standart-aside__icon" data-click="edit"><use xlink:href="#back"></use></svg>
+                    <p class="edit-header__title standart-aside__title">Редактирование</p>
+                </div>
+                <p class="edit-header__save" data-click="edit">Сохранить</p>
+            </div>
+            <!-- Этот блок можно искользовать как шаблон для отображения редактирования пользователя -->
+            <!-- Использовал редактируемые блоки для удобства   
+
+            <div class="edit-content standart-aside-content" id="edit-content">
+                <div class="edit-photo-wrapper">
+                    <label class="edit-photo">
+                        <input type="file" id="edit_image">
+                        <img class="edit-photo__img" src="./img/${avatarka}" alt="${avatarka}">
+                        <svg class="edit-photo__icon"><use xlink:href="#camera"></use></svg>
+                    </label>
+                </div>
+                <div class="edit-name">
+                    <p class="edit__text">Имя</p>
+                    <p class="edit__input edit-item" id="name" contenteditable="true">${name}</p>
+                </div>
+                <div class="edit-lastname">
+                    <p class="edit__text">Фамилия</p>
+                    <p class="edit__input edit-item" id="lastname" contenteditable="true">${lastname}</p>
+                </div>
+                <div class="edit-bio">
+                    <p class="edit__text">Биография</p>
+                    <p class="edit__input edit-item" id="bio" contenteditable="true">${bio}</p>
+                </div>
+            </div>
+            
+            -->
+
+            <div class="edit-content standart-aside-content" id="edit-content">
+                <div class="edit-photo-wrapper">
+                    <label class="edit-photo">
+                        <input type="file" id="edit_image">
+                        <img class="edit-photo__img" src="./img/abstraction.png" alt="ssdadfsdfs">
+                        <svg class="edit-photo__icon"><use xlink:href="#camera"></use></svg>
+                    </label>
+                </div>
+                <div class="edit-name">
+                    <p class="edit__text">Имя</p>
+                    <p class="edit__input edit-item" id="name" contenteditable="true">Данил</p>
+                </div>
+                <div class="edit-lastname">
+                    <p class="edit__text">Фамилия</p>
+                    <p class="edit__input edit-item" id="lastname" contenteditable="true">Литвинов</p>
+                </div>
+                <div class="edit-bio">
+                    <p class="edit__text">Биография</p>
+                    <p class="edit__input edit-item" id="bio" contenteditable="true">Люблю игры, программирование. Стек Css + Html, JS, Python. Родтлся в Москве. Путешествовал много где, гуляю часто. Еще много текста воды для примера</p>
+                </div>
+            </div>
+
+        </section>
+
+        <main class="main" style="background: url(./img/background.png);">
+            <!-- Этот блок можно искользовать как шаблон для отображения диалога с пользователем -->
+            <!-- 
+
+            <div class="tabs__pane">
+                <div class="main-header">
+                    <div class="main-header__user">
+                        <div class="main-header__wrapper-img">
+                            <img class="main-header__img" src="./img/abstraction.png" alt="abstraction_ava">
+                        </div>
+                        <p class="main-header__name">Михаил Романович</p>
+                    </div>
+                </div>
+                <div class="main-content">
+                    Содержимое 1...
+                </div>
+                <form class="main-form-message">
+                    <input type="text" name="message" class="main-form-message__input" placeholder="Введите сообщение...">
+                    <div class="main-form-message__wrapper-submit">
+                        <input type="submit" value="" class="main-form-message__submit" required>
+                        <svg class="main-form-message__send-icon"><use xlink:href="#send"></use></svg>
+                    </div>
+                </form>
+            </div>
+
+            -->
+
+            <div class="tabs__pane">
+                <div class="main-header">
+                    <div class="main-header__user">
+                        <div class="main-header__wrapper-img">
+                            <img class="main-header__img" src="./img/man3.jpg" alt="man3_message">
+                        </div>
+                        <p class="main-header__name">Михаил Романович</p>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений пользователя -->
+                    <!-- 
+
+                    <div class="main-content__message-right">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений собеседника -->
+                    <!-- 
+
+                    <div class="main-content__message-left">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+
+                </div>
+                <form class="main-form-message">
+                    <input type="text" name="message" class="main-form-message__input" placeholder="Введите сообщение...">
+                    <div class="main-form-message__wrapper-submit">
+                        <input type="submit" value="" class="main-form-message__submit" required>
+                        <svg class="main-form-message__send-icon"><use xlink:href="#send"></use></svg>
+                    </div>
+                </form>
+            </div>
+            <div class="tabs__pane">
+                <div class="main-header">
+                    <div class="main-header__user">
+                        <div class="main-header__wrapper-img">
+                            <img class="main-header__img" src="./img/man1.jpg" alt="man1_message">
+                        </div>
+                        <p class="main-header__name">Федот Филотов</p>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений пользователя -->
+                    <!-- 
+
+                    <div class="main-content__message-right">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений собеседника -->
+                    <!-- 
+
+                    <div class="main-content__message-left">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <div class="main-content__message-left">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 2..
+                    </div>
+                </div>
+                <form class="main-form-message">
+                    <input type="text" name="message" class="main-form-message__input" placeholder="Введите сообщение...">
+                    <div class="main-form-message__wrapper-submit">
+                        <input type="submit" value="" class="main-form-message__submit" required>
+                        <svg class="main-form-message__send-icon"><use xlink:href="#send"></use></svg>
+                    </div>
+                </form>
+            </div>
+            <div class="tabs__pane">
+                <div class="main-header">
+                    <div class="main-header__user">
+                        <div class="main-header__wrapper-img">
+                            <img class="main-header__img" src="./img/man2.jpg" alt="man2_message">
+                        </div>
+                        <p class="main-header__name">Военкомат</p>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений пользователя -->
+                    <!-- 
+
+                    <div class="main-content__message-right">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений собеседника -->
+                    <!-- 
+
+                    <div class="main-content__message-left">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                </div>
+                <form class="main-form-message">
+                    <input type="text" name="message" class="main-form-message__input" placeholder="Введите сообщение...">
+                    <div class="main-form-message__wrapper-submit">
+                        <input type="submit" value="" class="main-form-message__submit" required>
+                        <svg class="main-form-message__send-icon"><use xlink:href="#send"></use></svg>
+                    </div>
+                </form>
+            </div>
+            <div class="tabs__pane">
+                <div class="main-header">
+                    <div class="main-header__user">
+                        <div class="main-header__wrapper-img">
+                            <img class="main-header__img" src="./img/abstraction.png" alt="abstraction_ava">
+                        </div>
+                        <p class="main-header__name">Михаил Романович</p>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений пользователя -->
+                    <!-- 
+
+                    <div class="main-content__message-right">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений собеседника -->
+                    <!-- 
+
+                    <div class="main-content__message-left">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+
+                </div>
+                <form class="main-form-message">
+                    <input type="text" name="message" class="main-form-message__input" placeholder="Введите сообщение...">
+                    <div class="main-form-message__wrapper-submit">
+                        <input type="submit" value="" class="main-form-message__submit" required>
+                        <svg class="main-form-message__send-icon"><use xlink:href="#send"></use></svg>
+                    </div>
+                </form>
+            </div>
+            <div class="tabs__pane">
+                <div class="main-header">
+                    <div class="main-header__user">
+                        <div class="main-header__wrapper-img">
+                            <img class="main-header__img" src="./img/abstraction.png" alt="abstraction_ava">
+                        </div>
+                        <p class="main-header__name">Федот Филотов</p>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений пользователя -->
+                    <!-- 
+
+                    <div class="main-content__message-right">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений собеседника -->
+                    <!-- 
+
+                    <div class="main-content__message-left">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <div class="main-content__message-left">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 2..
+                    </div>
+                </div>
+                <form class="main-form-message">
+                    <input type="text" name="message" class="main-form-message__input" placeholder="Введите сообщение...">
+                    <div class="main-form-message__wrapper-submit">
+                        <input type="submit" value="" class="main-form-message__submit" required>
+                        <svg class="main-form-message__send-icon"><use xlink:href="#send"></use></svg>
+                    </div>
+                </form>
+            </div>
+            <div class="tabs__pane">
+                <div class="main-header">
+                    <div class="main-header__user">
+                        <div class="main-header__wrapper-img">
+                            <img class="main-header__img" src="./img/abstraction.png" alt="abstraction_ava">
+                        </div>
+                        <p class="main-header__name">Военкомат</p>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений пользователя -->
+                    <!-- 
+
+                    <div class="main-content__message-right">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений собеседника -->
+                    <!-- 
+
+                    <div class="main-content__message-left">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                </div>
+                <form class="main-form-message">
+                    <input type="text" name="message" class="main-form-message__input" placeholder="Введите сообщение...">
+                    <div class="main-form-message__wrapper-submit">
+                        <input type="submit" value="" class="main-form-message__submit" required>
+                        <svg class="main-form-message__send-icon"><use xlink:href="#send"></use></svg>
+                    </div>
+                </form>
+            </div>
+            <div class="tabs__pane">
+                <div class="main-header">
+                    <div class="main-header__user">
+                        <div class="main-header__wrapper-img">
+                            <img class="main-header__img" src="./img/abstraction.png" alt="abstraction_ava">
+                        </div>
+                        <p class="main-header__name">Михаил Романович</p>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений пользователя -->
+                    <!-- 
+
+                    <div class="main-content__message-right">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений собеседника -->
+                    <!-- 
+
+                    <div class="main-content__message-left">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+
+                </div>
+                <form class="main-form-message">
+                    <input type="text" name="message" class="main-form-message__input" placeholder="Введите сообщение...">
+                    <div class="main-form-message__wrapper-submit">
+                        <input type="submit" value="" class="main-form-message__submit" required>
+                        <svg class="main-form-message__send-icon"><use xlink:href="#send"></use></svg>
+                    </div>
+                </form>
+            </div>
+            <div class="tabs__pane">
+                <div class="main-header">
+                    <div class="main-header__user">
+                        <div class="main-header__wrapper-img">
+                            <img class="main-header__img" src="./img/abstraction.png" alt="abstraction_ava">
+                        </div>
+                        <p class="main-header__name">Федот Филотов</p>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений пользователя -->
+                    <!-- 
+
+                    <div class="main-content__message-right">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений собеседника -->
+                    <!-- 
+
+                    <div class="main-content__message-left">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <div class="main-content__message-left">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 2..
+                    </div>
+                </div>
+                <form class="main-form-message">
+                    <input type="text" name="message" class="main-form-message__input" placeholder="Введите сообщение...">
+                    <div class="main-form-message__wrapper-submit">
+                        <input type="submit" value="" class="main-form-message__submit" required>
+                        <svg class="main-form-message__send-icon"><use xlink:href="#send"></use></svg>
+                    </div>
+                </form>
+            </div>
+            <div class="tabs__pane">
+                <div class="main-header">
+                    <div class="main-header__user">
+                        <div class="main-header__wrapper-img">
+                            <img class="main-header__img" src="./img/abstraction.png" alt="abstraction_ava">
+                        </div>
+                        <p class="main-header__name">Военкомат</p>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений пользователя -->
+                    <!-- 
+
+                    <div class="main-content__message-right">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений собеседника -->
+                    <!-- 
+
+                    <div class="main-content__message-left">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                </div>
+                <form class="main-form-message">
+                    <input type="text" name="message" class="main-form-message__input" placeholder="Введите сообщение...">
+                    <div class="main-form-message__wrapper-submit">
+                        <input type="submit" value="" class="main-form-message__submit" required>
+                        <svg class="main-form-message__send-icon"><use xlink:href="#send"></use></svg>
+                    </div>
+                </form>
+            </div>
+            <div class="tabs__pane">
+                <div class="main-header">
+                    <div class="main-header__user">
+                        <div class="main-header__wrapper-img">
+                            <img class="main-header__img" src="./img/abstraction.png" alt="abstraction_ava">
+                        </div>
+                        <p class="main-header__name">Михаил Романович</p>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений пользователя -->
+                    <!-- 
+
+                    <div class="main-content__message-right">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений собеседника -->
+                    <!-- 
+
+                    <div class="main-content__message-left">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+
+                </div>
+                <form class="main-form-message">
+                    <input type="text" name="message" class="main-form-message__input" placeholder="Введите сообщение...">
+                    <div class="main-form-message__wrapper-submit">
+                        <input type="submit" value="" class="main-form-message__submit" required>
+                        <svg class="main-form-message__send-icon"><use xlink:href="#send"></use></svg>
+                    </div>
+                </form>
+            </div>
+            <div class="tabs__pane">
+                <div class="main-header">
+                    <div class="main-header__user">
+                        <div class="main-header__wrapper-img">
+                            <img class="main-header__img" src="./img/abstraction.png" alt="abstraction_ava">
+                        </div>
+                        <p class="main-header__name">Федот Филотов</p>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений пользователя -->
+                    <!-- 
+
+                    <div class="main-content__message-right">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений собеседника -->
+                    <!-- 
+
+                    <div class="main-content__message-left">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <div class="main-content__message-left">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 2..
+                    </div>
+                </div>
+                <form class="main-form-message">
+                    <input type="text" name="message" class="main-form-message__input" placeholder="Введите сообщение...">
+                    <div class="main-form-message__wrapper-submit">
+                        <input type="submit" value="" class="main-form-message__submit" required>
+                        <svg class="main-form-message__send-icon"><use xlink:href="#send"></use></svg>
+                    </div>
+                </form>
+            </div>
+            <div class="tabs__pane">
+                <div class="main-header">
+                    <div class="main-header__user">
+                        <div class="main-header__wrapper-img">
+                            <img class="main-header__img" src="./img/abstraction.png" alt="abstraction_ava">
+                        </div>
+                        <p class="main-header__name">Военкомат</p>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений пользователя -->
+                    <!-- 
+
+                    <div class="main-content__message-right">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений собеседника -->
+                    <!-- 
+
+                    <div class="main-content__message-left">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                </div>
+                <form class="main-form-message">
+                    <input type="text" name="message" class="main-form-message__input" placeholder="Введите сообщение...">
+                    <div class="main-form-message__wrapper-submit">
+                        <input type="submit" value="" class="main-form-message__submit" required>
+                        <svg class="main-form-message__send-icon"><use xlink:href="#send"></use></svg>
+                    </div>
+                </form>
+            </div>
+            <div class="tabs__pane">
+                <div class="main-header">
+                    <div class="main-header__user">
+                        <div class="main-header__wrapper-img">
+                            <img class="main-header__img" src="./img/abstraction.png" alt="abstraction_ava">
+                        </div>
+                        <p class="main-header__name">Михаил Романович</p>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений пользователя -->
+                    <!-- 
+
+                    <div class="main-content__message-right">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений собеседника -->
+                    <!-- 
+
+                    <div class="main-content__message-left">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+
+                </div>
+                <form class="main-form-message">
+                    <input type="text" name="message" class="main-form-message__input" placeholder="Введите сообщение...">
+                    <div class="main-form-message__wrapper-submit">
+                        <input type="submit" value="" class="main-form-message__submit" required>
+                        <svg class="main-form-message__send-icon"><use xlink:href="#send"></use></svg>
+                    </div>
+                </form>
+            </div>
+            <div class="tabs__pane">
+                <div class="main-header">
+                    <div class="main-header__user">
+                        <div class="main-header__wrapper-img">
+                            <img class="main-header__img" src="./img/abstraction.png" alt="abstraction_ava">
+                        </div>
+                        <p class="main-header__name">Федот Филотов</p>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений пользователя -->
+                    <!-- 
+
+                    <div class="main-content__message-right">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений собеседника -->
+                    <!-- 
+
+                    <div class="main-content__message-left">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <div class="main-content__message-left">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 2..
+                    </div>
+                </div>
+                <form class="main-form-message">
+                    <input type="text" name="message" class="main-form-message__input" placeholder="Введите сообщение...">
+                    <div class="main-form-message__wrapper-submit">
+                        <input type="submit" value="" class="main-form-message__submit" required>
+                        <svg class="main-form-message__send-icon"><use xlink:href="#send"></use></svg>
+                    </div>
+                </form>
+            </div>
+            <div class="tabs__pane">
+                <div class="main-header">
+                    <div class="main-header__user">
+                        <div class="main-header__wrapper-img">
+                            <img class="main-header__img" src="./img/abstraction.png" alt="abstraction_ava">
+                        </div>
+                        <p class="main-header__name">Военкомат</p>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений пользователя -->
+                    <!-- 
+
+                    <div class="main-content__message-right">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений собеседника -->
+                    <!-- 
+
+                    <div class="main-content__message-left">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                </div>
+                <form class="main-form-message">
+                    <input type="text" name="message" class="main-form-message__input" placeholder="Введите сообщение...">
+                    <div class="main-form-message__wrapper-submit">
+                        <input type="submit" value="" class="main-form-message__submit" required>
+                        <svg class="main-form-message__send-icon"><use xlink:href="#send"></use></svg>
+                    </div>
+                </form>
+            </div>
+            <div class="tabs__pane">
+                <div class="main-header">
+                    <div class="main-header__user">
+                        <div class="main-header__wrapper-img">
+                            <img class="main-header__img" src="./img/abstraction.png" alt="abstraction_ava">
+                        </div>
+                        <p class="main-header__name">Михаил Романович</p>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений пользователя -->
+                    <!-- 
+
+                    <div class="main-content__message-right">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений собеседника -->
+                    <!-- 
+
+                    <div class="main-content__message-left">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+
+                </div>
+                <form class="main-form-message">
+                    <input type="text" name="message" class="main-form-message__input" placeholder="Введите сообщение...">
+                    <div class="main-form-message__wrapper-submit">
+                        <input type="submit" value="" class="main-form-message__submit" required>
+                        <svg class="main-form-message__send-icon"><use xlink:href="#send"></use></svg>
+                    </div>
+                </form>
+            </div>
+            <div class="tabs__pane">
+                <div class="main-header">
+                    <div class="main-header__user">
+                        <div class="main-header__wrapper-img">
+                            <img class="main-header__img" src="./img/abstraction.png" alt="abstraction_ava">
+                        </div>
+                        <p class="main-header__name">Федот Филотов</p>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений пользователя -->
+                    <!-- 
+
+                    <div class="main-content__message-right">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений собеседника -->
+                    <!-- 
+
+                    <div class="main-content__message-left">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <div class="main-content__message-left">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 2..
+                    </div>
+                </div>
+                <form class="main-form-message">
+                    <input type="text" name="message" class="main-form-message__input" placeholder="Введите сообщение...">
+                    <div class="main-form-message__wrapper-submit">
+                        <input type="submit" value="" class="main-form-message__submit" required>
+                        <svg class="main-form-message__send-icon"><use xlink:href="#send"></use></svg>
+                    </div>
+                </form>
+            </div>
+            <div class="tabs__pane">
+                <div class="main-header">
+                    <div class="main-header__user">
+                        <div class="main-header__wrapper-img">
+                            <img class="main-header__img" src="./img/abstraction.png" alt="abstraction_ava">
+                        </div>
+                        <p class="main-header__name">Военкомат</p>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений пользователя -->
+                    <!-- 
+
+                    <div class="main-content__message-right">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений собеседника -->
+                    <!-- 
+
+                    <div class="main-content__message-left">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                </div>
+                <form class="main-form-message">
+                    <input type="text" name="message" class="main-form-message__input" placeholder="Введите сообщение...">
+                    <div class="main-form-message__wrapper-submit">
+                        <input type="submit" value="" class="main-form-message__submit" required>
+                        <svg class="main-form-message__send-icon"><use xlink:href="#send"></use></svg>
+                    </div>
+                </form>
+            </div>
+            <div class="tabs__pane">
+                <div class="main-header">
+                    <div class="main-header__user">
+                        <div class="main-header__wrapper-img">
+                            <img class="main-header__img" src="./img/abstraction.png" alt="abstraction_ava">
+                        </div>
+                        <p class="main-header__name">Михаил Романович</p>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений пользователя -->
+                    <!-- 
+
+                    <div class="main-content__message-right">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений собеседника -->
+                    <!-- 
+
+                    <div class="main-content__message-left">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+
+                </div>
+                <form class="main-form-message">
+                    <input type="text" name="message" class="main-form-message__input" placeholder="Введите сообщение...">
+                    <div class="main-form-message__wrapper-submit">
+                        <input type="submit" value="" class="main-form-message__submit" required>
+                        <svg class="main-form-message__send-icon"><use xlink:href="#send"></use></svg>
+                    </div>
+                </form>
+            </div>
+            <div class="tabs__pane">
+                <div class="main-header">
+                    <div class="main-header__user">
+                        <div class="main-header__wrapper-img">
+                            <img class="main-header__img" src="./img/abstraction.png" alt="abstraction_ava">
+                        </div>
+                        <p class="main-header__name">Федот Филотов</p>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений пользователя -->
+                    <!-- 
+
+                    <div class="main-content__message-right">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений собеседника -->
+                    <!-- 
+
+                    <div class="main-content__message-left">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <div class="main-content__message-left">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 2..
+                    </div>
+                </div>
+                <form class="main-form-message">
+                    <input type="text" name="message" class="main-form-message__input" placeholder="Введите сообщение...">
+                    <div class="main-form-message__wrapper-submit">
+                        <input type="submit" value="" class="main-form-message__submit" required>
+                        <svg class="main-form-message__send-icon"><use xlink:href="#send"></use></svg>
+                    </div>
+                </form>
+            </div>
+            <div class="tabs__pane">
+                <div class="main-header">
+                    <div class="main-header__user">
+                        <div class="main-header__wrapper-img">
+                            <img class="main-header__img" src="./img/abstraction.png" alt="abstraction_ava">
+                        </div>
+                        <p class="main-header__name">Военкомат</p>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений пользователя -->
+                    <!-- 
+
+                    <div class="main-content__message-right">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений собеседника -->
+                    <!-- 
+
+                    <div class="main-content__message-left">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                </div>
+                <form class="main-form-message">
+                    <input type="text" name="message" class="main-form-message__input" placeholder="Введите сообщение...">
+                    <div class="main-form-message__wrapper-submit">
+                        <input type="submit" value="" class="main-form-message__submit" required>
+                        <svg class="main-form-message__send-icon"><use xlink:href="#send"></use></svg>
+                    </div>
+                </form>
+            </div>
+            <div class="tabs__pane">
+                <div class="main-header">
+                    <div class="main-header__user">
+                        <div class="main-header__wrapper-img">
+                            <img class="main-header__img" src="./img/abstraction.png" alt="abstraction_ava">
+                        </div>
+                        <p class="main-header__name">Михаил Романович</p>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений пользователя -->
+                    <!-- 
+
+                    <div class="main-content__message-right">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений собеседника -->
+                    <!-- 
+
+                    <div class="main-content__message-left">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+
+                </div>
+                <form class="main-form-message">
+                    <input type="text" name="message" class="main-form-message__input" placeholder="Введите сообщение...">
+                    <div class="main-form-message__wrapper-submit">
+                        <input type="submit" value="" class="main-form-message__submit" required>
+                        <svg class="main-form-message__send-icon"><use xlink:href="#send"></use></svg>
+                    </div>
+                </form>
+            </div>
+            <div class="tabs__pane">
+                <div class="main-header">
+                    <div class="main-header__user">
+                        <div class="main-header__wrapper-img">
+                            <img class="main-header__img" src="./img/abstraction.png" alt="abstraction_ava">
+                        </div>
+                        <p class="main-header__name">Федот Филотов</p>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений пользователя -->
+                    <!-- 
+
+                    <div class="main-content__message-right">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений собеседника -->
+                    <!-- 
+
+                    <div class="main-content__message-left">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <div class="main-content__message-left">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-right">
+                        Содержимое 2..
+                    </div>
+                </div>
+                <form class="main-form-message">
+                    <input type="text" name="message" class="main-form-message__input" placeholder="Введите сообщение...">
+                    <div class="main-form-message__wrapper-submit">
+                        <input type="submit" value="" class="main-form-message__submit" required>
+                        <svg class="main-form-message__send-icon"><use xlink:href="#send"></use></svg>
+                    </div>
+                </form>
+            </div>
+            <div class="tabs__pane">
+                <div class="main-header">
+                    <div class="main-header__user">
+                        <div class="main-header__wrapper-img">
+                            <img class="main-header__img" src="./img/abstraction.png" alt="abstraction_ava">
+                        </div>
+                        <p class="main-header__name">Военкомат</p>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений пользователя -->
+                    <!-- 
+
+                    <div class="main-content__message-right">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <!-- Этот блок можно искользовать как шаблон для отображения сообщений собеседника -->
+                    <!-- 
+
+                    <div class="main-content__message-left">
+                        ${message_content}
+                    </div>
+
+                    -->
+
+                    <div class="main-content__message-right">
+                        Содержимое 1..
+                    </div>
+                    <div class="main-content__message-left">
+                        Содержимое 2..
+                    </div>
+                </div>
+                <form class="main-form-message">
+                    <input type="text" name="message" class="main-form-message__input" placeholder="Введите сообщение...">
+                    <div class="main-form-message__wrapper-submit">
+                        <input type="submit" value="" class="main-form-message__submit" required>
+                        <svg class="main-form-message__send-icon"><use xlink:href="#send"></use></svg>
+                    </div>
+                </form>
+            </div>
+
+        </main>
+
+    </section>
+
+    <footer class="footer"> <!-- Футер использовал как svg-sprite блок -->
+        <svg>
+            <symbol id="person_search" viewBox="0 0 15 15">
+                <path d="M6.88281 7.1875C6.23177 7.1875 5.67708 6.95801 5.21875 6.49903C4.76042 6.04004 4.53125 5.48828 4.53125 4.84375C4.53125 4.1875 4.76074 3.63281 5.21972 3.17969C5.67871 2.72656 6.23047 2.5 6.875 2.5C7.53125 2.5 8.08594 2.72656 8.53906 3.17969C8.99219 3.63281 9.21875 4.1849 9.21875 4.83594C9.21875 5.48698 8.99219 6.04167 8.53906 6.5C8.08594 6.95833 7.53385 7.1875 6.88281 7.1875ZM6.875 6.25C7.27083 6.25 7.60417 6.1123 7.875 5.83691C8.14583 5.56152 8.28125 5.23047 8.28125 4.84375C8.28125 4.44792 8.14583 4.11458 7.875 3.84375C7.60417 3.57292 7.27344 3.4375 6.88281 3.4375C6.49219 3.4375 6.15885 3.57292 5.88281 3.84375C5.60677 4.11458 5.46875 4.44531 5.46875 4.83594C5.46875 5.22656 5.60645 5.5599 5.88184 5.83594C6.15723 6.11198 6.48828 6.25 6.875 6.25ZM14.0312 14.6875L11.8438 12.5C11.6042 12.6771 11.3568 12.7995 11.1016 12.8672C10.8464 12.9349 10.5856 12.9688 10.3193 12.9688C9.57956 12.9688 8.95078 12.7103 8.43297 12.1935C7.91516 11.6766 7.65625 11.049 7.65625 10.3107C7.65625 9.5723 7.91468 8.94531 8.43153 8.42969C8.94837 7.91406 9.57598 7.65625 10.3143 7.65625C11.0527 7.65625 11.6797 7.91516 12.1953 8.43297C12.7109 8.95078 12.9688 9.57956 12.9688 10.3193C12.9688 10.5856 12.9349 10.8464 12.8672 11.1016C12.7995 11.3568 12.6771 11.6042 12.5 11.8438L14.6875 14.0312L14.0312 14.6875ZM10.3125 12.0312C10.8021 12.0312 11.2109 11.8672 11.5391 11.5391C11.8672 11.2109 12.0312 10.8021 12.0312 10.3125C12.0312 9.82292 11.8672 9.41406 11.5391 9.08594C11.2109 8.75781 10.8021 8.59375 10.3125 8.59375C9.82292 8.59375 9.41406 8.75781 9.08594 9.08594C8.75781 9.41406 8.59375 9.82292 8.59375 10.3125C8.59375 10.8021 8.75781 11.2109 9.08594 11.5391C9.41406 11.8672 9.82292 12.0312 10.3125 12.0312ZM1.875 12.5V11.0312C1.875 10.6458 1.96615 10.3177 2.14844 10.0469C2.33073 9.77604 2.59375 9.55208 2.9375 9.375C3.42708 9.13542 4.0651 8.90885 4.85156 8.69531C5.63802 8.48177 6.4375 8.40104 7.25 8.45312C7.16667 8.58854 7.08854 8.73698 7.01562 8.89844C6.94271 9.0599 6.88542 9.21875 6.84375 9.375C6.03125 9.36458 5.32292 9.46094 4.71875 9.66406C4.11458 9.86719 3.64583 10.0521 3.3125 10.2188C3.16667 10.3021 3.04688 10.4141 2.95312 10.5547C2.85938 10.6953 2.8125 10.8542 2.8125 11.0312V11.5625H6.84375C6.95833 11.7396 7.0625 11.9036 7.15625 12.0547C7.25 12.2057 7.35417 12.3542 7.46875 12.5H1.875Z"/>
+            </symbol>
+            <symbol id="burger_menu" viewBox="0 0 26 26">
+                <path d="M7 17V16H19V17H7ZM7 13.5V12.5H19V13.5H7ZM7 10V9H19V10H7Z"/>
+            </symbol>
+            <symbol id="send" viewBox="0 0 30 30">
+                <path d="M3.75 25V5L27.5 15L3.75 25ZM5.625 22.0938L22.625 15L5.625 7.8125V13.0625L13.1875 15L5.625 16.875V22.0938Z"/>
+            </symbol>    
+            <symbol viewBox="0 0 25 26" id="edit">
+                <path d="M6.98226 17.5177H7.70259L14.955 10.2653L14.2347 9.54502L6.98226 16.7974V17.5177ZM17.0341 9.56139L14.9386 7.46589L15.6262 6.77831C15.8117 6.59277 16.0409 6.5 16.3138 6.5C16.5866 6.5 16.8158 6.59277 17.0014 6.77831L17.7217 7.49864C17.9072 7.68417 18 7.91337 18 8.18622C18 8.45907 17.9072 8.68827 17.7217 8.87381L17.0341 9.56139ZM16.3465 10.249L8.0955 18.5H6V16.4045L14.251 8.15348L16.3465 10.249ZM14.5948 9.90518L14.2347 9.54502L14.955 10.2653L14.5948 9.90518Z"/>
+            </symbol>
+            <symbol viewBox="0 0 26 26" id="back">
+                <path d="M12.5 19L6 12.5L12.5 6L13.3531 6.85312L8.31562 11.8906H19V13.1094H8.31562L13.3531 18.1469L12.5 19Z"/>
+            </symbol>
+            <symbol viewBox="0 0 25 25" id="info">
+                <path d="M11.7969 17.7083H13.3594V11.4583H11.7969V17.7083ZM12.4995 9.53126C12.7429 9.53126 12.947 9.4514 13.112 9.29168C13.2769 9.13195 13.3594 8.93404 13.3594 8.69793C13.3594 8.44706 13.277 8.23677 13.1124 8.06707C12.9478 7.89736 12.7438 7.81251 12.5004 7.81251C12.2571 7.81251 12.0529 7.89736 11.888 8.06707C11.7231 8.23677 11.6406 8.44706 11.6406 8.69793C11.6406 8.93404 11.7229 9.13195 11.8875 9.29168C12.0522 9.4514 12.2562 9.53126 12.4995 9.53126ZM12.5069 22.9167C11.0706 22.9167 9.72073 22.6432 8.45743 22.0964C7.19413 21.5495 6.08939 20.803 5.14321 19.8568C4.19703 18.9106 3.4505 17.8052 2.90363 16.5406C2.35675 15.276 2.08331 13.9248 2.08331 12.487C2.08331 11.0492 2.35675 9.69795 2.90363 8.43337C3.4505 7.16877 4.19703 6.06772 5.14321 5.13022C6.08939 4.19272 7.19478 3.45053 8.45938 2.90366C9.72396 2.35678 11.0752 2.08334 12.513 2.08334C13.9508 2.08334 15.302 2.35678 16.5666 2.90366C17.8312 3.45053 18.9323 4.19272 19.8698 5.13022C20.8073 6.06772 21.5495 7.17015 22.0963 8.43751C22.6432 9.70487 22.9166 11.0567 22.9166 12.4931C22.9166 13.9294 22.6432 15.2793 22.0963 16.5426C21.5495 17.8059 20.8073 18.909 19.8698 19.852C18.9323 20.795 17.8298 21.5415 16.5625 22.0916C15.2951 22.6416 13.9433 22.9167 12.5069 22.9167ZM12.513 21.3542C14.9696 21.3542 17.0573 20.4905 18.776 18.763C20.4948 17.0356 21.3541 14.9436 21.3541 12.487C21.3541 10.0304 20.4964 7.94272 18.7809 6.22397C17.0654 4.50522 14.9718 3.64584 12.5 3.64584C10.0521 3.64584 7.96439 4.50359 6.23696 6.21907C4.50953 7.93458 3.64581 10.0282 3.64581 12.5C3.64581 14.9479 4.50953 17.0356 6.23696 18.763C7.96439 20.4905 10.0564 21.3542 12.513 21.3542Z"/>
+            </symbol>      
+            <symbol viewBox="0 0 15 16" id="logout">
+                <path d="M1.25 15.5C0.916667 15.5 0.625 15.375 0.375 15.125C0.125 14.875 0 14.5833 0 14.25V1.75C0 1.41667 0.125 1.125 0.375 0.875C0.625 0.625 0.916667 0.5 1.25 0.5H7.3125V1.75H1.25V14.25H7.3125V15.5H1.25ZM11.375 11.6458L10.4792 10.75L12.6042 8.625H5.3125V7.375H12.5625L10.4375 5.25L11.3333 4.35417L15 8.02083L11.375 11.6458Z"/>
+            </symbol>          
+            <symbol viewBox="0 0 25 26" id="person">
+                <path d="M12.5 12.974C11.3542 12.974 10.4167 12.6094 9.68752 11.8802C8.95835 11.1511 8.59377 10.2136 8.59377 9.06772C8.59377 7.92189 8.95835 6.98439 9.68752 6.25522C10.4167 5.52605 11.3542 5.16147 12.5 5.16147C13.6459 5.16147 14.5834 5.52605 15.3125 6.25522C16.0417 6.98439 16.4063 7.92189 16.4063 9.06772C16.4063 10.2136 16.0417 11.1511 15.3125 11.8802C14.5834 12.6094 13.6459 12.974 12.5 12.974ZM4.16669 21.3333V18.8854C4.16669 18.2257 4.33162 17.6615 4.66148 17.1927C4.99134 16.724 5.41669 16.3681 5.93752 16.125C7.10071 15.6042 8.21617 15.2136 9.28387 14.9531C10.3516 14.6927 11.4236 14.5625 12.5 14.5625C13.5764 14.5625 14.6441 14.6971 15.7031 14.9662C16.7622 15.2353 17.8726 15.6232 19.0344 16.1301C19.5778 16.3753 20.0135 16.7309 20.3415 17.1969C20.6694 17.6629 20.8334 18.2257 20.8334 18.8854V21.3333H4.16669ZM5.72919 19.7708H19.2709V18.8854C19.2709 18.6076 19.1884 18.3429 19.0235 18.0912C18.8585 17.8394 18.6545 17.6528 18.4115 17.5313C17.3004 16.9931 16.2847 16.6241 15.3646 16.4245C14.4445 16.2248 13.4896 16.125 12.5 16.125C11.5104 16.125 10.5469 16.2248 9.6094 16.4245C8.6719 16.6241 7.65627 16.9931 6.56252 17.5313C6.31946 17.6528 6.11981 17.8394 5.96356 18.0912C5.80731 18.3429 5.72919 18.6076 5.72919 18.8854V19.7708ZM12.5 11.4115C13.1771 11.4115 13.737 11.1901 14.1797 10.7474C14.6224 10.3047 14.8438 9.7448 14.8438 9.06772C14.8438 8.39064 14.6224 7.83074 14.1797 7.38803C13.737 6.94532 13.1771 6.72397 12.5 6.72397C11.8229 6.72397 11.263 6.94532 10.8203 7.38803C10.3776 7.83074 10.1563 8.39064 10.1563 9.06772C10.1563 9.7448 10.3776 10.3047 10.8203 10.7474C11.263 11.1901 11.8229 11.4115 12.5 11.4115Z"/>
+            </symbol>
+            <symbol viewBox="0 0 48 48" id="camera">
+                <path d="M23.975 34.7C26.3917 34.7 28.4167 33.8833 30.05 32.25C31.6833 30.6167 32.5 28.5917 32.5 26.175C32.5 23.7583 31.6833 21.7417 30.05 20.125C28.4167 18.5083 26.3917 17.7 23.975 17.7C21.5583 17.7 19.5417 18.5083 17.925 20.125C16.3083 21.7417 15.5 23.7583 15.5 26.175C15.5 28.5917 16.3083 30.6167 17.925 32.25C19.5417 33.8833 21.5583 34.7 23.975 34.7ZM23.975 31.7C22.3917 31.7 21.0833 31.175 20.05 30.125C19.0167 29.075 18.5 27.7583 18.5 26.175C18.5 24.5917 19.0167 23.2833 20.05 22.25C21.0833 21.2167 22.3917 20.7 23.975 20.7C25.5583 20.7 26.875 21.2167 27.925 22.25C28.975 23.2833 29.5 24.5917 29.5 26.175C29.5 27.7583 28.975 29.075 27.925 30.125C26.875 31.175 25.5583 31.7 23.975 31.7ZM7 42C6.2 42 5.5 41.7 4.9 41.1C4.3 40.5 4 39.8 4 39V13.35C4 12.5833 4.3 11.8917 4.9 11.275C5.5 10.6583 6.2 10.35 7 10.35H14.35L18 6H30L33.65 10.35H41C41.7667 10.35 42.4583 10.6583 43.075 11.275C43.6917 11.8917 44 12.5833 44 13.35V39C44 39.8 43.6917 40.5 43.075 41.1C42.4583 41.7 41.7667 42 41 42H7ZM41 39V13.35H32.25L28.6 9H19.4L15.75 13.35H7V39H41Z"/>
+            </symbol>                
+        </svg>
+    </footer>
+</body>
+</html>

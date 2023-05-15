@@ -1,0 +1,137 @@
+@import "standart";
+
+#incorrect-register .modal-dialog {
+    height: 100vh;
+    margin-block: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#incorrect-register .btn-secondary {
+    background-color: $attention;
+    border: none;
+}
+#incorrect-register .modal-header, 
+#incorrect-register .modal-body, 
+#incorrect-register .modal-footer {
+    border: none;
+    padding: 0;
+}
+#incorrect-register .modal-content {
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+#incorrect-register .modal-body__text {
+    color: $accent-two-level;
+}
+#incorrect-register .modal-title__attention {
+    fill: $attention;
+}
+
+// register
+.register {
+    &-wrapper {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    width: min(1200px, 100% - 2rem);
+    height: min(600px, 100%);
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 15px rgba($color: #000000, $alpha: .15);
+    border-radius: 16px;
+
+		&__img {
+            max-height: 600px;
+		}
+
+		&__form {
+            width: min(450px, 100%);
+            height: min(350px, 100%);
+		}
+}
+
+.form {
+    &__btn-register {
+        padding: .75em;
+        color: $standart-color-text-one;
+        background-color: $button-accent;
+        border: none;
+        border-radius: 16px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+    }
+}
+
+.form-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__top {
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.form-item {
+    width: 100%;
+
+    margin-bottom: 1em;
+    &:last-child {
+        margin-bottom: none;
+    }
+
+		&__title {
+            @include standart_text;
+            margin-block: 0 6px;
+            color: $accent-three-level;
+		}
+
+		&__input {
+            width: 100%;
+            border: 1px solid $content-accent-one;
+            border-radius: 16px;
+            padding: 1rem .75em;
+
+            &::placeholder {
+                color: $accent-one-level;
+            }
+		}
+
+        &__text {
+            @include small_text;
+            color: $accent-two-level;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        &__link {
+            text-decoration: underline;
+            color: $standart-color-text-two;
+        }
+}
+// register end
+
+@media (width < 1000px) {
+    .register {
+        padding: 5em 1em;
+        height: auto;
+        justify-content: center;
+
+        &__img {
+            display: none;
+        }
+    }
+}
